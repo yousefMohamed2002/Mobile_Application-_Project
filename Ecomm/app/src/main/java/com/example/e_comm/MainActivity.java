@@ -1,15 +1,11 @@
 package com.example.e_comm;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -17,7 +13,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecycleViewInterface {
 ImageView BurgerIcon;
 DrawerLayout drawer;
 RecyclerView rc;
@@ -47,8 +43,22 @@ List<item> items=new ArrayList<item>();
         });
      rc=findViewById(R.id.RecycleView);
      rc.setLayoutManager(new LinearLayoutManager(this));
-     rc.setAdapter(new MyAdapter(getApplicationContext(),items));
+     rc.setAdapter(new MyAdapter(getApplicationContext(),items, this));
     }
 
 
+    @Override
+    public void OnIteamClick(int Position) {
+        Intent intent=new Intent(MainActivity.this,MainActivity2.class);
+        intent.putExtra("photo",items.get(Position).getImage());
+        System.out.println(items.get(Position).getName());
+        intent.putExtra("Name",items.get(Position).getName());
+        intent.putExtra("Description",items.get(Position).getDescription());
+        intent.putExtra("Price",items.get(Position).getPrice());
+        startActivity(intent);
+
+
+
+
+    }
 }

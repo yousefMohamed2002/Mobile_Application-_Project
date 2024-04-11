@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:id="@+id/mwo">
+    <item android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/home1">
+
+    </item>
+    <item android:id="@+id/MyOrders"
+        android:icon="@drawable/order"
+        android:title="Orders">
+    </item>
+    <item android:id="@+id/nav_wishlist"
+        android:icon="@drawable/wishlist"
+        android:title="WishList">
+    </item>
+    <item android:id="@+id/nav_cart"
+        android:icon="@drawable/cart"
+        android:title="Chart">
+    </item>
+    <item android:id="@+id/Offers"
+        android:icon="@drawable/offers"
+        android:title="Offers">
+    </item>
+</group>
+    <group android:id="@+id/rra">
+        <item android:id="@+id/nav_refer_Friends"
+            android:title="ReferFriends"
+            android:icon="@drawable/share">
+        </item>
+        <item android:id="@+id/nav_rate"
+            android:title="Rate App"
+            android:icon="@drawable/like">
+        </item>
+        <item android:id="@+id/nav_Logout"
+            android:title="Logout"
+            android:icon="@drawable/logout">
+        </item>
+        <item android:id="@+id/nav_privacy"
+            android:title="Privacy"
+            android:icon="@drawable/shield">
+        </item>
+        <item android:id="@+id/nav_about"
+            android:title="About"
+            android:icon="@drawable/information">
+        </item>
+    </group>
+
+    <group android:id="@+id/hpa">
+        <item android:id="@+id/nav_profile"
+            android:title="Profile"
+            android:icon="@drawable/user">
+        </item>
+        <item android:id="@+id/id_notifications_icon"
+            android:title="Notifications"
+            android:icon="@drawable/notification">
+        </item>
+        <item android:id="@+id/nav_help"
+            android:title="Help"
+            android:icon="@drawable/question">
+        </item>
+        <item android:id="@+id/nav_Cust"
+            android:title="Custmization"
+            android:icon="@drawable/shield">
+        </item>
+        <item android:id="@+id/MOreButton"
+            android:title="Future Button"
+            android:icon="@drawable/information">
+        </item>
+    </group>
+</menu>
